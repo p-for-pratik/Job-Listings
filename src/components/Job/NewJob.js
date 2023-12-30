@@ -96,9 +96,11 @@ export default (props) => {
         "Javascript",
         "React",
         "Node",
-        "Firebase",
+        "Spring boot",
         "MongoDB",
         "SQL",
+        "Java",
+        "C++",
 
     ];
     console.log(jobDetails);

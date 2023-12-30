@@ -16,7 +16,7 @@ import {
     CircularProgress,
 } from "@material-ui/core";
 import { Close as CloseIcon } from "@material-ui/icons";
-import { format } from 'date-fns'
+import { isValid,format } from 'date-fns';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -55,7 +55,7 @@ export default props => {
                 <Box>
                     <Box className={classes.info} display="flex">
                         <Typography variant="caption">Posted on : </Typography>
-                        <Typography variant="body2"> {props.job.postedOn && format(props.job.postedOn, "dd/MMM/yyyy HH:MM")}</Typography>
+                        <Typography variant="body2"> {isValid(props.job.postedOn) && format(new Date(props.job.postedOn), "dd/MMM/yyyy HH:MM")}</Typography>
                     </Box>
                     <Box className={classes.info} display="flex">
                         <Typography variant="caption">Job type : </Typography>
